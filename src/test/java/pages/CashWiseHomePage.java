@@ -32,4 +32,7 @@ public class CashWiseHomePage {
     @FindBy(xpath = "(//input)[3]")
     public WebElement contactEmailField;
 
+    @FindBy(xpath = "(//h2)[6]")
+    public WebElement popUpMainPage;
+
 }
