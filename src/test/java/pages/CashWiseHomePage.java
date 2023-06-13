@@ -35,4 +35,19 @@ public class CashWiseHomePage {
     @FindBy(xpath = "(//h2)[6]")
     public WebElement popUpMainPage;
 
+    @FindBy(xpath = "(//div)[7]")
+    public WebElement languageMainDrop;
+
+    @FindBy(xpath = "(//span)[25]")
+    public WebElement russianLanguage;
+
+    @FindBy(xpath = "(//span)[23]")
+    public WebElement englishLanguage;
+
+    @FindBy(xpath = "//h1")
+    public WebElement mainText;
+
+
+
+
 }
