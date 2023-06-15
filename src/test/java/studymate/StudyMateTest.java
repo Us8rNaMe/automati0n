@@ -4,7 +4,6 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.StudyMateLoginPage;
@@ -19,14 +18,8 @@ public class StudyMateTest {
     public void setupUrl(){
         Driver.getDriver().get(Config.getValue("URL"));
     }
-    /*@AfterMethod
-    public void cleanUp(){
-        Driver.quit();
-    }
-
-     */
     @Test
-            public void checkLogic(){
+    public void checkLogic(){
         StudyMateLoginPage studyMateLoginPage = new StudyMateLoginPage();
         studyMateLoginPage.emailField.sendKeys(Config.getValue("studyMateEmail"));
         studyMateLoginPage.passwordField.sendKeys(Config.getValue("studyMatePassword"));
@@ -35,9 +28,8 @@ public class StudyMateTest {
         studyMateLoginPage.GroupsBtn.click();
         List<WebElement> elements = Driver.getDriver().findElements(By.xpath("//div[@class='css-1qf1rpk']/div"));
         System.out.println(elements.size());
-
+        Driver.quit();
     }
-
     @Test
     public void login(){
         StudyMateLoginPage studyMateLoginPage = new StudyMateLoginPage();
@@ -64,6 +56,7 @@ public class StudyMateTest {
             studyMateLoginPage.descriptionBtn.sendKeys(faker.chuckNorris().fact());
             studyMateLoginPage.creatingGroupBtnAfterDescription.click();
         }
+        Driver.quit();
     }
     @Test
     public void deletingGroup(){
@@ -81,7 +74,6 @@ public class StudyMateTest {
                 numericDigits.append(ch);
             }
         }
-
         String str = numericDigits.toString();
         int number = Integer.parseInt(str);
 
@@ -91,7 +83,6 @@ public class StudyMateTest {
             studyMateLoginPage.confirmDeleteGroup.click();
             ApplicationFlow.pause(500);
         }
-        //ssert.assertEquals(studyMateLoginPage.numbersOfProject.getText(),1);
+        Driver.quit();
     }
-
 }
