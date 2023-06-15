@@ -2,19 +2,16 @@ package studymate;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.StudyMateLoginPage;
 import utilities.ApplicationFlow;
 import utilities.Config;
 import utilities.Driver;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class StudyMateTest {
@@ -22,10 +19,12 @@ public class StudyMateTest {
     public void setupUrl(){
         Driver.getDriver().get(Config.getValue("URL"));
     }
-    @AfterMethod
+    /*@AfterMethod
     public void cleanUp(){
         Driver.quit();
     }
+
+     */
     @Test
             public void checkLogic(){
         StudyMateLoginPage studyMateLoginPage = new StudyMateLoginPage();
@@ -59,7 +58,7 @@ public class StudyMateTest {
         studyMateLoginPage.GroupsBtn.click();
         for(int i = 0;i<=10;i++) {
             studyMateLoginPage.btnForCreatingGroup.click();
-            studyMateLoginPage.groupNameField.sendKeys(faker.name().name());
+            studyMateLoginPage.groupNameField.sendKeys(faker.name().prefix());
             studyMateLoginPage.groupCalendaryField.click();
             studyMateLoginPage.firstDayCalendar.click();
             studyMateLoginPage.descriptionBtn.sendKeys(faker.chuckNorris().fact());

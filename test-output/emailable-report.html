@@ -25,29 +25,61 @@ td,th {border:1px solid #009;padding:.25em .5em}
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
 <tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">regression</a></td><td class="numi">7</td><td class="numi">7</td><td class="numi">0</td><td class="numi">0</td><td class="numi">68.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">regression</a></td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">76.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr id="t1"><th colspan="5">regression &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="3">studymate.StudyMateTest</td><td><a href="#m1"><b>checkLogic</b>  </a></td><td class="numi">1</td><td>1686711307281</td><td class="numi">3299</td></tr><tr class="passedodd"><td><a href="#m2"><b>deletingGroup</b>  </a></td><td class="numi">1</td><td>1686711313304</td><td class="numi">24959</td></tr><tr class="passedodd"><td><a href="#m3"><b>login</b>  </a></td><td class="numi">1</td><td>1686711361069</td><td class="numi">2933</td></tr>
-<tr class="passedeven"><td>cashwise.CashWiseHomePageTest</td><td><a href="#m4"><b>contactPopUp</b>  </a></td><td class="numi">1</td><td>1686711297849</td><td class="numi">999</td></tr>
-<tr class="passedodd"><td>studymate.StudyMateTest</td><td><a href="#m5"><b>groupCreation</b>  </a></td><td class="numi">1</td><td>1686711341096</td><td class="numi">17338</td></tr>
-<tr class="passedeven"><td rowspan="2">cashwise.CashWiseHomePageTest</td><td><a href="#m6"><b>russian</b>  </a></td><td class="numi">1</td><td>1686711303972</td><td class="numi">713</td></tr><tr class="passedeven"><td><a href="#m7"><b>english</b>  </a></td><td class="numi">1</td><td>1686711301052</td><td class="numi">722</td></tr>
+<tr id="t1"><th colspan="5">regression &#8212; failed</th></tr>
+<tr class="failedodd"><td>studymate.StudyMateTest</td><td><a href="#m1"><b>groupCreation</b>  </a></td><td class="numi">1</td><td>1686714774508</td><td class="numi">15624</td></tr>
+<tr><th colspan="5">regression &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">cashwise.CashWiseHomePageTest</td><td><a href="#m2"><b>contactPopUp</b>  </a></td><td class="numi">1</td><td>1686714723138</td><td class="numi">1315</td></tr><tr class="passedodd"><td><a href="#m3"><b>russian</b>  </a></td><td class="numi">1</td><td>1686714730096</td><td class="numi">827</td></tr>
+<tr class="passedeven"><td rowspan="2">studymate.StudyMateTest</td><td><a href="#m4"><b>deletingGroup</b>  </a></td><td class="numi">1</td><td>1686714740402</td><td class="numi">31602</td></tr><tr class="passedeven"><td><a href="#m5"><b>checkLogic</b>  </a></td><td class="numi">1</td><td>1686714733604</td><td class="numi">3314</td></tr>
+<tr class="passedodd"><td>cashwise.CashWiseHomePageTest</td><td><a href="#m6"><b>english</b>  </a></td><td class="numi">1</td><td>1686714726968</td><td class="numi">794</td></tr>
+<tr class="passedeven"><td>studymate.StudyMateTest</td><td><a href="#m7"><b>login</b>  </a></td><td class="numi">1</td><td>1686714792662</td><td class="numi">3031</td></tr>
 </table>
 <h1>regression</h1>
-<h2 id="m1">cashwise.CashWiseHomePageTest:russian</h2>
+<h2 id="m1">studymate.StudyMateTest:groupCreation</h2>
+<div>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//input)[4]&quot;}
+  (Session info: chrome=114.0.5735.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d1699e794f09fd523bcb683c7d56ede2, findElement {using=xpath, value=(//input)[4]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\POWERV~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65139}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65139/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d1699e794f09fd523bcb683c7d56ede2
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at studymate.StudyMateTest.groupCreation(StudyMateTest.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 25 stack frames</div>
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">studymate.StudyMateTest:checkLogic</h2>
+<h2 id="m2">cashwise.CashWiseHomePageTest:english</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">studymate.StudyMateTest:deletingGroup</h2>
+<h2 id="m3">studymate.StudyMateTest:login</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">studymate.StudyMateTest:login</h2>
+<h2 id="m4">cashwise.CashWiseHomePageTest:contactPopUp</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">cashwise.CashWiseHomePageTest:english</h2>
+<h2 id="m5">cashwise.CashWiseHomePageTest:russian</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">cashwise.CashWiseHomePageTest:contactPopUp</h2>
+<h2 id="m6">studymate.StudyMateTest:deletingGroup</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">studymate.StudyMateTest:groupCreation</h2>
+<h2 id="m7">studymate.StudyMateTest:checkLogic</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
